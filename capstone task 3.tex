@@ -1,0 +1,282 @@
+\documentclass[12pt,A4]{article}
+\usepackage{natbib}
+\usepackage{booktabs}
+
+%remove () from year in the bottom References
+\renewcommand\harvardyearleft{\unskip, }
+\renewcommand\harvardyearright[1]{.}
+
+\title{Modelling and Design of a Self-Reconfigurable Quadcopter Based System}
+\date{April 2019}
+\begin{document}
+	\maketitle
+	\begin{center}
+		41029: Engineering Research Preparation\\\centering
+		
+		Task 3: Research Proposal\\\centering
+		\bigskip
+		\bigskip
+		\bigskip
+		\bigskip
+		\bigskip
+		\bigskip
+		\bigskip
+		\bigskip
+		\bigskip
+		\bigskip
+		\bigskip
+		\bigskip
+		\bigskip
+		\bigskip
+		\bigskip
+		Project Number: S19-163\\\centering
+		Student Name: Hein Wai Leong\\\centering
+		Student ID: 12480000\\\centering
+		Supervisor: Associate Professor Sarath Kodagoda\\\centering
+		Co-Supervisor: Benjamin Moshirian\\\centering
+	\end{center}
+	\pagebreak
+	
+	% |----------------- Beginning of the content for the report -----------------|
+	\section{Aim and Objective}
+	
+	With recent advancement in quad-copter design and capabilities, the potential of utilising a quad-copter based system in the various field has grown exponentially. This has lead to an increase of research around quad-copter with swarm behaviours to solve collective task, however these quad-copter could not work collectively as a single structure to adapt and solve different problems.\\
+	
+	Inspired by biological system such as ant and bee colonies, the aim of this research is to model the colony collective effort for self-reconfigurable modular robotics system, which in this case a quad-copter based system. Most ant species are able to work collectively to solve complex task such as building massive structures, exploration and transporting food. Some ant species are even able to build a raft on the surface of waters using their own body. A layer of ants on the bottom of the raft serves as a base where water cannot penetrate the
+	raft allowing the ants to stay dry. This was achieved through collective work
+	between the ants that forms a tightly knit ”weave \citep{mlot2011fire}.\\
+	
+	% insert image of ants floating on water
+	
+	Recent work in self-reconfigurable modular robotics have been focused on increasing the modularity of these system to be used in unstructured and unpredictable environment. Design such as M-TRAN has long established the feasibility of modular robotics which is able to metamorphose into various shape and by changing connectivity among the modules without external help \citep{murata2002m-tran}. In \citep{duffy2015lift} it proposed a scalable multi-rotor aircraft which can be manually extended depending on the payload requirement. \citep{jorgensen2004modular} proposed a  modular robotics system with a lattice structure, which uses a hooks powered by a motor to create a physical connection between modules. These research all rely on traditional attachment and detachment mechanism which was not designed to be used in modular robotics. Hence this research intent to investigate and proposed new attachment and detachment design for modular robotics.\\
+	
+	One of the main objective in this research is to simulate the behaviour of quad-copter based system during self-reconfiguration and to evaluate any possible algorithm for self-reconfiguration. We would like to investigate possible materials and mechanism for a new attachment and detachment design for modular robotics. Eventually, we would like to create a self-contained Autonomous Ground Vehicle (AGV) to test our prototype proposed design.\\
+
+	\section{Background}
+	
+	An advantage of a modular self-reconfigurable quad-copter based system is it flexibility and modularity. This advantage could only be realised if the system is able to metamorphose or self-reconfigure into different structure and behaviour without any external help. One of the few scenarios that would benefit from these system are rescue missions. Swarms robotics are ideal for unpredictable and dangerous areas as it is easily deployable, able to navigate to hard to reach areas and work collaboratively to solve different task \citep{stormont2005autonomous}. It could also be used to detect the present of life or provide aid in a search and rescue mission. However, swarms robotics only works collaboratively and not collectively to solve complex task. Hence, it does not require a physical connection between the quad-copters.\\
+	
+	A similarly proposed research idea known as ModQuad, creates a single flying structure from multiple individual quad-copter by assembling in mid-air \citep{saldana2018modquad}. The team uses four Neodymium Iron Boron (NdFeB) magnet on each face of the quad-copter as a mean for docking. When two modules are connected face-to-face, the four magnets are able to provide a bonding force of equivalent to a 1kg. This force is significantly stronger in comparison to the moment and torque produce by the individual module. The use of magnets allows them to create a reliable and robust connection, but does not allow for undocking.\\
+	
+	Another research lead by the researches in ETH Zurich demonstrated a different modular flight system, known as the distributed flight array \citep{oung2011distributed}. Similar to the ModQuad, it has magnets located symmetrically within its foam structure as a mean of attachment and detachment. However, the distributed flight array does not dock in mid-air, but rather it has tiny omni-directional wheel embedded within the foam structure of the module. This allows the module to drive independently of each other to allow it to attach and detach from each other. The detachment is done by driving the two modules opposite of each other to create a force strong enough to break the bond. This would require the drone to first land if it were to reconfigure into a different structure.\\
+	
+	The neodymium magnet seems to be a popular method for attachment and detachment in an aerial module, however ground module tends to favour a physical connection. A ground module could utilise a hook like physical connector to connect between two module. This would indicate that the strength of the connection is govern by the strength of the materials. It would also be relatively easy to implement as there would not be any weight limitation for a ground module compared to an aerial module. The researches from M-TRAN III proposed a similar mechanism which utilise physical hooks manufactured from extruded plastic \citep{kurokawa2008distributed}. These hooks are driven by a servo motor within the module. These sorts of mechanism has a relatively strong bonding force compared to magnets as the strength of the connection are dependent on the strength of the materials. However, \citep{murata2002m-tran} proposed a mechanical connection using magnets for M-TRAN. M-TRAN utilise four Samarium-Cobalt permanent magnet which are embedded on each of the connection surface. The M-TRAN system consist of moving parts, which allows it to provide the force to overcome the bonding force from the magnets, and allow it to detect from another module.\\
+	
+	% insert table for connection comparision
+	\begin{table}[h]
+		\centering
+		\caption{Comparison of different system}
+		\begin{tabular}{lp{2cm}p{2.5cm}lp{5cm}}
+			\hline
+			\hline
+			Year & Author           & System                   & Class        & Connection Mechanism                      \\ \hline
+			2004 & Jorgensen et al. & ATRON                    & Lattice      & Physical hooks made from CNC aluminium    \\
+			2002 & Murata et al.    & M-TRAN                   & Hybrid       & Four Samarium-Cobalt permanent magnet     \\
+			2005 & Stormont         & Autonomou Swarm          & None         & None                                      \\
+			2008 & Kurokawa et al.  & M-TRAN III               & Hybrid       & Physical hooks made from extruded plastic  \\
+			2011 & Oung \& DAndrea  & Distributed Flight Array & Single Plane & Two Neodymium magnets                     \\
+			2018 & Saldana et al.   & ModQuad                  & Single Plane & Four Neodymium Iron Boron (NdFeB) magnets	\\ \hline
+		\end{tabular}
+	\end{table}
+	
+	Table 1 showed that there are two main design used for mechanical connection. These mechanism are proven to be reliable, however it is only feasible in that particular system. Hence this research aims to not only design a new attachment and detachment design for a quad-copter based system, but also a universal design where it could be used in any other class of system, either it be aerial, ground or water. \\
+	
+	This hypothetical universal attachment and detachment mechanism has to be connected without a physical link and should be able to provide attachment and detachment without requiring any addition force. This generalisation of mechanical connection could allow different class of modular robotics to use a generic self-reconfiguration or even highly efficient self-reconfiguration algorithm.
+
+	\section{Analysis of Impact}
+	
+	One of the main reason for the increasing adoption for robotics system in the market to automate production line is due to the increasing labour cost around world. In addition, robotics system are able to relieve humans of tedious and dangerous task. The market has also demand for more modular robots where it could do different task without human intervention, which lead to the increase of research around modular robotics system.\\
+	
+	One potential application for a modular quad-copter system is in construction. This application has been proven to be feasible as shown in \citep{augugliaro2014flight}. The paper proposed a system which swarms of
+	quad-copter would assemble a structure. This approach does not consider the
+	potential of collective effort in a quad-copter system. Our approach would ex-
+	tend the functionality of individual quad-copter by forming a flying structure
+	which could self-assemble in midair into different configuration depending on
+	the task. This allows the individual module to work collectively to solve
+	various task such as lifting payload of different weight.\\
+	
+	Another potential application which would benefit the society is search and rescue mission. Quad-copter are ideal for unpredictable and dangerous area for humans as it could easily navigate to hard to reach areas. \citep{stormont2005autonomous} proposed a swarms of quad-copter that could work collaboratively to aid in search and rescue missions. We could extend the functionality of the individual quad-copter into a single structure which would have additional function such as carrying a large payload, mapping of the surrounding to provide navigation for first responder and much more.\\
+	
+	Although a modular quad-copter based system seems to bring a lot of benefits, there are some major issues that surround such a system, one of the issues are the violation of privacy. Due to the versatility of such a system, it could be misused by malicious entity for unauthorised surveillance to gather information over a private property, or in a worst case scenario, reconnaissance of highly classified areas. With the need to push for autonomous flight, more sensors are required on the individual module to increase the amount of data for higher
+	level planning. Vital information of such can be obtained from quad-copter
+	using network exploits and malware based attacks which would compromise
+	personal privacy \citep{vattapparamban2016drones}. This would also raise the
+	question if the data collected from the quad-copter are being used for other
+	purpose as well. Therefore, polices and strict guideline have to be set in place
+	before moving forward with such technology.\\
+	
+	This advancement in quad-copter design and robotics will push the frontier to re-imaging the future of robotics. In my opinion, I believe that this research would be the foundation for future modular robotics and open up the possibilities and future application of modular robotics.\\
+
+	\section{Proposed Methodology}
+	
+	As stated in the objective section, this research will be broken down into three different part. Each of these objective are crucial to the outcome of this research and it is required to be done in the order as shown below.
+	
+	\begin{enumerate}
+		\item Create a simulation for testing of algorithms
+		\item Proposed a feasible attachment and detachment mechanism
+		\item Create a prototype to test the proposed mechanism
+	\end{enumerate}
+	
+	\subsection{Simulation}
+	
+	This research project requires a simulation as research in the modular quad-copter based system structure is relatively new in the field of robotics. Hence, it is vital that we create a simulation to simulate how a quad-copter module would attach and detach with other modules. We would first like to understand how a quad-copter would behave when 2 or more modules are connected to each other.\\ %TODO: Add reference
+	
+	Simulation modelling solves most of the real-world problems safely and efficiently. It provides us with an important method of analysis which is easily verified, communicated and understood. The simulation would allow us to visualise how our module should attach and detach from each other. As different mechanism requires different motion for attachment and detachment, this visualisation tool would allow us to evaluate the feasibility of these attachment and detachment motion.\\
+	
+	There are a variety of simulation which could be used to aid us in visualising what we are trying to achieve, and each of the individual simulation has their own benefits. Here's a list of some of the possible simulation that could be used:
+	
+	\begin{itemize}
+		\item PyBullet
+		\item Gazebo ROS Package
+		\item ROS Visualization
+	\end{itemize}
+	
+	\subsubsection{PyBullet}
+	\hfill\begin{minipage}{\dimexpr\textwidth-1cm}
+	PyBullet is a Python module for physics simulation, robotics and deep reinforcement learning based on the Bullet Physics SDK. It utilise the Bullet Physics SDK to provide a real-time physics simulation which includes real-time collision detection, multi-physics simulation, soft and rigid body dynamics.\\ %TODO: Add reference
+	
+	PyBullet is purely a physics simulation to get the dynamics of soft or rigid body. It does not cooperate virtual sensors to obtain sensor data and it does not render in OpenGL, hence most of the model in the simulation has no textures, lighting and shadows.\\
+	\end{minipage}
+	
+	\subsubsection{Gazebo ROS Package}
+	\hfill\begin{minipage}{\dimexpr\textwidth-1cm}
+	Gazebo ROS Package is a robot simulation integrated with Robot Operating System (ROS). Gazebo simulation has more advance features which includes different Physics SDK such as ODE, Bullet and DART. It also enable 3D rendering in OpenGL to render graphics in the simulation. This allows the simulation show real object textures, lighting and shadow.\\ %TODO: Add reference
+	
+	In addition, integration with ROS allows user to test their algorithm in Gazebo. One benefit of Gazebo is its capability to integrate virtual sensors and being able to get actual data from the simulation to test the algorithm. It allows user to integrate noise into the simulated virtual data to test the robustness of the algorithm as well, and simulate how data would be like in the real world.\\
+	\end{minipage}
+	
+	\subsubsection{ROS Visualisation}
+	\hfill\begin{minipage}{\dimexpr\textwidth-1cm}
+	ROS Visualisation, also known as RVIZ is a 3D visualiser for displaying sensor data and state information from ROS. Using RVIZ, user are able to visualise actual output of the system in a 3D format. However, RVIZ does not include any physics SDK and is purely a tool for visualisation.\\
+	\end{minipage}
+	
+	Although all of the mention simulator has it's own advantage, there is one flaw in all of them. It only simulate Newtonian physics and does not simulate fluid dynamics, which is crucial for our research. The dynamics of a quad-copter is govern by the how fluids interact with the model, which requires computation fluid dynamics to solve such a problem. Hence we would not be able to get the actual dynamics of the system.\\
+	
+	After a deliberate evaluation, we decided to use Gazebo as our simulator. This is because it provides different physics SDK plugins to test our simulation with and we are able to evaluate the performance of self-reconfiguration algorithm with the ROS integration. We would be able to test how our algorithm would work with different sensors as well because Gazebo allows virtual sensor integration with engineered noise as a data output from the simulator.\\
+	
+	\subsection{Proposed attachment and detachment mechanism}
+	
+	As mentioned in the background for this research, most of the modular robotics requires a mechanical connection between modules to work together as a structure. Due to this relatively new field in modular quad-copter based system. there is not much research being done for a potential connection mechanism for such a system. Most of the research are only being done as a ground system \citep{yim2007modular}. \\
+	
+	Our literature review in the background section shows that most of the modular robotics utilise two main connection mechanism, a physical hook made from various material and permanent magnets. These design has shown to be reliable and robust for their system but most of them are not suitable for a quad-copter based system due to the weight restriction. In addition, this research intent to design a universal connection mechanism which could be used in either aerial, ground or water system.\\
+	
+	In order to design such a universal mechanism, we would first to need determine the required specification for our system. These requirement would be specific to a quad-copter based system, however due to the weight and size constraint of an aerial system, a mechanism design around a quad-copter should be feasible for ground and water system as well. Here's a list of the required specification:
+	
+	\begin{itemize}
+		\item The design has to be lightweight
+		\item The design has to be small and compact, but scalable as well
+		\item The design should allow for attachment and detachment of modules without requiring any movement from the module
+		\item The design has to be low powered
+		\item The design has to provide a strong bonding force between modules
+	\end{itemize}
+	
+	After evaluating the specification required, we realise that a physical hook would not be feasible as the design is too bulky. The only material we think suitable would be magnets. However, current design such as ModQuad proposed by \citep{saldana2018modquad} already utilise Neodymium magnets for attachment. The issues with magnets is the force required to break the bonding force between 2 magnet. \\
+	
+	An electromagnet would solve the problem as we could control the polarity of the electromagnet. This allows for attachment and detachment just by changing the direction of flow of current in the electromagnet. However, such a system would require a huge amount of power and quad-copter has notoriously low flight time due to low battery capacity and the high energy drain because of the on-board avionics system \citep{lee2015autonomous}. Hence such a design would not be feasible.\\
+	
+	In order to overcome these problems, we started to look for a possible design which utilise programmable magnets. Programmed magnets, or polymagnets are magnetic structure that incorporate correlated patterns of magnets with alternating polarity, design to achieve a desired behaviour and delivery stronger local force. By varying the magnetic fields and strengths, different mechanical behaviours can be controlled \citep{polymagnet2008}.\\
+	
+	Programmed magnets can be programmed, or coded, by varying the polarity and field strengths of each source of the arrays of magnetic sources that make up each structure. This allows us to create special mechanical behaviours when two polymagnet are placed together. One of these behaviours is a latch system where the magnet will be attracted to each other when aligned. Once it is out of alignment, it would produce a strong magnetic force. This sort of design is ideal for our situation as only a rotational force is require to detach to connected modules.\\
+	
+	Although this seems to be a viable material for our universal connection mechanism, more research and testing is required to evaluate the different design of the magnet for use in a self-reconfigurable quad-copter based system.\\
+	
+	\subsection{Creating a prototype}
+	
+	Once we have finalise our connection mechanism design, we would have to create a prototype to evaluate the proposed design. Although this design was created for a quad-copter based system, I do not have sufficient time to create a working quad-copter prototype. Therefore we decided to create a ground system to evaluate the proposed design.\\
+	
+	The ground system would be similar to an Autonomous Ground Vehicle (AGV). but in a small size and a shape of a cube. This module will include wheels and a computing unit to run simple task. If time permits, these module could be integrated with sensors to create a single structure with varying sensors package.\\
+	
+	We proposed to manufacture six to nine AGV modules to test the our connection mechanism. Due to the universal connection design, we believe that testing on a AGV would be similar to testing on the quad-copter based system. However, there are some limitation to this testing as well. We could not simulate the dynamics of a quad-copter in an AGV, hence we would only be testing the feasibility of the connection mechanism and not how the new design would affect the dynamics of the quad-copter based system.\\
+	
+	\section{Work Plan}
+	
+	\subsection{Research Project Scope}
+	
+	The main objective of this research is to create a simulation for a self-reconfigurable quad-copter based system, investigate the possible universal connection mechanism which is not only feasible in an aerial system, but ground and water as well and creating a prototype for testing and data collection. This research project would have to be completed by 23rd of October.\\
+	
+	The primary objective of this project is to research for possible materials and design for a universal connection mechanism for attachment and detachment in a quad-copter based system. This project will consist of a mixture of research, manufacturing of preliminary design as prototypes and testing which will span through a period of nine months.\\
+	
+	Majority of the preliminary work would be focused on analysing the existing methods of self-reconfiguration and researching possible mechanism for attachment and detachment. The final proposed idea would be manufactured to create a simple prototype for testing. The prototype would be 3D printed using PLA material and eventually carbon fibre or nylon version if it were to be used for further research.\\
+	
+	As soon as the proposed mechanism has been manufactured, the next step is to write simple algorithm for the AGV to demonstrate the how the system works in a ground system. The final stage would be to test the design and collect data from the actual system. The data collected could be analysed, and it could be used to determine if the proposed design is feasible.\\
+	
+	\subsection{Process and Timeline}
+	
+	There are several processes in this project which is crucial to the success of the project. These crucial processes are also the major milestone in this project. These milestones are set in place to ensure the research project is kept up to the schedule.\\
+	
+	% insert new process and timeline
+	
+	This timeline is created to ensure that there is sufficient time to manufacture the prototype, and maximise the amount of time in research and development of new universal connection mechanism. This compromise would provide me with the most time for research, but enough time to create a prototype for the capstone showcase. Due to the time constraint, this timeline was design to allocate bulk of the time into actual engineering research and implementation for the research project. The rest are the preparation required for the subject.\\
+	
+	A detailed Gantt chart (refer to Appendix) will illustrate the major and minor milestones, deliverable and duration required to complete the task. The Gantt chart is a useful tool to keep track of the progress of the project. If the project went according to the schedule defined within the Gantt chart, it would guarantee the project would be done within the time constraint.\\
+	
+	\subsection{Milestones and resources}
+	\subsubsection{Capstone research proposal formulated}
+	
+	This milestone consist of several task which will predominantly be conducted in the research preparation subject. The goal of the research proposal is to define a clear and concise plan for the actual research within the time constraint. A problem analysis brief would better allow me to understand the engineering problems or challenges with the proposed project and conduct in depth research.\\
+
+	The next task within this milestone is a project management plan, which will organise the actual research project into pre-defined timeline and schedules. This organisation and planning would help check the progress of the project and ensure the completion of the project within a timely manner.\\
+	
+	Finally, there is the research proposal, which will communicate with the capstone project supervisor how the actual project would be executed, the methodology and planning of the research. This proposal would define the proposed design and solutions with the problems stated within the problem analysis brief. It would also include the research methodologies, project management plan and the expected workloads for the project.\\
+	
+	In order to aid with the completion of this milestone, I've included some resources which might be useful.
+	
+	\begin{itemize}
+		\item Research database (e.g. IEEE Explore, Google Scholar)
+		\item Project Management Software (Microsoft project)
+	\end{itemize}
+	
+	\subsubsection{Preparation stage complete}
+	
+	This milestone is crucial as it prepares me for the actual research and development of the system. Excluding the simulation, there are many components and equipment's that is required to be used during manufacturing of the proposed design. There are several tasks in this milestone and one of them includes buying materials needed for the prototyping as there might be a lead time in the purchasing and delivery of materials.\\
+	
+	Once all of the component arrives, they would need to be prepared before using them. The proposed Automated Ground Vehicle (AGV) contains a lot of electrical components which requires soldering and modification. In addition, some simple low-level code is required to run the basic functionality of the AGV such a driving, getting sensor data and much more.\\
+	
+	Raw material such as the proposed programmable magnets would need to be tested. This is done to ensure that all of the components arrive safely and if any of the product is defective, it could be replace as soon as possible for a new one.\\
+	
+	Some of the resources that are required for this milestone includes:
+	\begin{itemize}
+		\item Raw material for manufacturing of parts
+		\item ROS tutorials and package
+		\item Low-level programming for micro-controller
+	\end{itemize}
+	
+	\subsubsection{Creating a simulation}
+	
+	\subsubsection{Proposed feasible mechanism}
+	
+	\subsubsection{Manufacture prototype}
+	
+	\subsubsection{Capstone prototype ready for showcase}
+	
+	This milestone is to ensure all the required component for the capstone showcase is prepared in advance. This includes creating a poster for the presentation, preparing a small enclosed environment to run the prototype to demonstrate the attachment and detachment mechanism.\\
+	
+	The methodologies and design would be presented with visual aid on the poster in order to communicate my idea to the reader clearly and efficiently.\\
+	
+	\subsubsection{Capstone closing stage}
+	
+	The last task and milestone involved in this capstone project is the final thesis. This thesis will include the details of the research and accomplishments that the project has achieved. Additionally, the methodologies, literature review and every other research that help form the idea will be included in detail in the report. The report would also need to follow a strict guideline on the format and writing standard so that it could be published at a conference or a journal publication.\\
+	
+	\subsection{Uncertainty and risk control}
+	
+	\subsection{Communication management}
+	
+	Constant communication is crucial to ensure the project runs smoothly, hence a communication plan outlining the communication channels and frequency amongst the part involved is included below.\\
+	
+	%TODO: insert screenshot of commuinication plan
+	
+	The primary recipient in the communication plan is the project co-supervisor as he would be helping out with most of the details of the project. We have agreed on various communication method which includes face to face meeting, emails and messaging. The secondary recipient would be the main supervisor. He would be overseeing the entire project and make all of the main decisions. The communication method with the main supervisor would be a lot more formal, including an appointment-based meeting and emails. The face to face meeting with the co-supervisor is the most efficient method of communication as it is the easiest to convey my idea directly to him.\\
+	
+	\section{Progress Statement}
+
+	
+	% |----------------- End of the content for the report -----------------|
+	\pagebreak
+	%Cooperative grasping and transport using multiple quadcopter
+	%https://www.bcg.com/en-us/publications/2015/reshoring-of-manufacturing-to-the-us-gains-momentum.aspx
+	%reference to FAA drone rules
+	%Drones for smart cities: Privacy(https://ieeexplore.ieee.org/abstract/document/7577060)
+
+\bibliographystyle{agsm}
+\bibliography{References}
+\end{document} 

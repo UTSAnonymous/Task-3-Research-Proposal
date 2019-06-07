@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: capstone task 3.aux
+The style file: agsm.bst
+Database file #1: References.bib
+Warning--entry type for "polymagnet2008" isn't style-file defined
+--line 101 of file References.bib
+You've used 13 entries,
+            2909 wiz_defined-function locations,
+            725 strings with 7826 characters,
+and the built_in function-call counts, 86241 in all, are:
+= -- 14252
+> -- 1210
+< -- 1
++ -- 7009
+- -- 378
+* -- 7714
+:= -- 16658
+add.period$ -- 13
+call.type$ -- 13
+change.case$ -- 176
+chr.to.int$ -- 13
+cite$ -- 13
+duplicate$ -- 261
+empty$ -- 510
+format.name$ -- 419
+if$ -- 15631
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 12
+newline$ -- 43
+num.names$ -- 129
+pop$ -- 60
+preamble$ -- 1
+purify$ -- 190
+quote$ -- 0
+skip$ -- 241
+stack$ -- 0
+substring$ -- 20511
+swap$ -- 82
+text.length$ -- 173
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 52
+warning$ -- 0
+while$ -- 284
+width$ -- 0
+write$ -- 187
+(There was 1 warning)

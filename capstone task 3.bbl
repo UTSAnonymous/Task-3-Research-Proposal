@@ -1,0 +1,88 @@
+\begin{thebibliography}{xx}
+
+\harvarditem[Augugliaro et~al.]{Augugliaro, Lupashin, Hamer, Male, Hehn,
+  Mueller, Willmann, Gramazio, Kohler \harvardand\
+  D'Andrea}{2014}{augugliaro2014flight}
+Augugliaro, F., Lupashin, S., Hamer, M., Male, C., Hehn, M., Mueller, M.~W.,
+  Willmann, J.~S., Gramazio, F., Kohler, M. \harvardand\ D'Andrea, R.
+  \harvardyearleft 2014\harvardyearright , `The flight assembled architecture
+  installation: Cooperative construction with flying machines', {\em IEEE
+  Control Systems Magazine} {\bf 34}(4),~46--64.
+
+\harvarditem{Duffy \harvardand\ Samaritano}{2015}{duffy2015lift}
+Duffy, M.~J. \harvardand\ Samaritano, A.  \harvardyearleft
+  2015\harvardyearright , The lift! project-modular, electric vertical lift
+  system with ground power tether, {\em in} `33rd AIAA Applied Aerodynamics
+  Conference', p.~3013.
+
+\harvarditem[Jorgensen et~al.]{Jorgensen, Ostergaard \harvardand\
+  Lund}{2004}{jorgensen2004modular}
+Jorgensen, M.~W., Ostergaard, E.~H. \harvardand\ Lund, H.~H.  \harvardyearleft
+  2004\harvardyearright , Modular atron: Modules for a self-reconfigurable
+  robot, {\em in} `2004 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems (IROS)(IEEE Cat. No. 04CH37566)', Vol.~2, Ieee, pp.~2068--2073.
+
+\harvarditem[Kurokawa et~al.]{Kurokawa, Tomita, Kamimura, Kokaji, Hasuo
+  \harvardand\ Murata}{2008}{kurokawa2008distributed}
+Kurokawa, H., Tomita, K., Kamimura, A., Kokaji, S., Hasuo, T. \harvardand\
+  Murata, S.  \harvardyearleft 2008\harvardyearright , `Distributed
+  self-reconfiguration of m-tran iii modular robotic system', {\em The
+  International Journal of Robotics Research} {\bf 27}(3-4),~373--386.
+
+\harvarditem[Lee et~al.]{Lee, Zhou \harvardand\ Lin}{2015}{lee2015autonomous}
+Lee, D., Zhou, J. \harvardand\ Lin, W.~T.  \harvardyearleft
+  2015\harvardyearright , Autonomous battery swapping system for quadcopter,
+  {\em in} `2015 International Conference on Unmanned Aircraft Systems
+  (ICUAS)', IEEE, pp.~118--124.
+
+\harvarditem[Mlot et~al.]{Mlot, Tovey \harvardand\ Hu}{2011}{mlot2011fire}
+Mlot, N.~J., Tovey, C.~A. \harvardand\ Hu, D.~L.  \harvardyearleft
+  2011\harvardyearright , `Fire ants self-assemble into waterproof rafts to
+  survive floods', {\em Proceedings of the National Academy of Sciences} {\bf
+  108}(19),~7669--7673.
+
+\harvarditem[Murata et~al.]{Murata, Yoshida, Kamimura, Kurokawa, Tomita
+  \harvardand\ Kokaji}{2002}{murata2002m-tran}
+Murata, S., Yoshida, E., Kamimura, A., Kurokawa, H., Tomita, K. \harvardand\
+  Kokaji, S.  \harvardyearleft 2002\harvardyearright , `M-tran:
+  Self-reconfigurable modular robotic system', {\em IEEE/ASME transactions on
+  mechatronics} {\bf 7}(4),~431--441.
+
+\harvarditem{Oung \harvardand\ D’Andrea}{2011}{oung2011distributed}
+Oung, R. \harvardand\ D’Andrea, R.  \harvardyearleft 2011\harvardyearright ,
+  `The distributed flight array', {\em Mechatronics} {\bf 21}(6),~908--917.
+
+\harvarditem{{\em Programmable magnet wikipedia site}}{n.d.}{polymagnet2008}
+{\em Programmable magnet wikipedia site}  \harvardyearleft
+  n.d.\harvardyearright .
+\newline\harvardurl{https://en.wikipedia.org/wiki/Programmable-magnet}
+
+\harvarditem[Saldana et~al.]{Saldana, Gabrich, Li, Yim \harvardand\
+  Kumar}{2018}{saldana2018modquad}
+Saldana, D., Gabrich, B., Li, G., Yim, M. \harvardand\ Kumar, V.
+  \harvardyearleft 2018\harvardyearright , Modquad: The flying modular
+  structure that self-assembles in midair, {\em in} `2018 IEEE International
+  Conference on Robotics and Automation (ICRA)', IEEE, pp.~691--698.
+
+\harvarditem{Stormont}{2005}{stormont2005autonomous}
+Stormont, D.~P.  \harvardyearleft 2005\harvardyearright , Autonomous rescue
+  robot swarms for first responders, {\em in} `CIHSPS 2005. Proceedings of the
+  2005 IEEE International Conference on Computational Intelligence for Homeland
+  Security and Personal Safety, 2005.', IEEE, pp.~151--157.
+
+\harvarditem[Vattapparamban et~al.]{Vattapparamban, G{\"u}ven{\c{c}}, Yurekli,
+  Akkaya \harvardand\ Ulua{\u{g}}a{\c{c}}}{2016}{vattapparamban2016drones}
+Vattapparamban, E., G{\"u}ven{\c{c}}, {\.I}., Yurekli, A.~{\.I}., Akkaya, K.
+  \harvardand\ Ulua{\u{g}}a{\c{c}}, S.  \harvardyearleft 2016\harvardyearright
+  , Drones for smart cities: Issues in cybersecurity, privacy, and public
+  safety, {\em in} `2016 International Wireless Communications and Mobile
+  Computing Conference (IWCMC)', IEEE, pp.~216--221.
+
+\harvarditem[Yim et~al.]{Yim, Shen, Salemi, Rus, Moll, Lipson, Klavins
+  \harvardand\ Chirikjian}{2007}{yim2007modular}
+Yim, M., Shen, W.-M., Salemi, B., Rus, D., Moll, M., Lipson, H., Klavins, E.
+  \harvardand\ Chirikjian, G.~S.  \harvardyearleft 2007\harvardyearright ,
+  `Modular self-reconfigurable robot systems [grand challenges of robotics]',
+  {\em IEEE Robotics \& Automation Magazine} {\bf 14}(1),~43--52.
+
+\end{thebibliography}
