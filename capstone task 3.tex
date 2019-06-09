@@ -1,6 +1,8 @@
 \documentclass[12pt,A4]{article}
 \usepackage{natbib}
 \usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{pdfpages}
 
 %remove () from year in the bottom References
 \renewcommand\harvardyearleft{\unskip, }
@@ -46,7 +48,11 @@
 	raft allowing the ants to stay dry. This was achieved through collective work
 	between the ants that forms a tightly knit ”weave \citep{mlot2011fire}.\\
 	
-	% insert image of ants floating on water
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=\linewidth]{pictures/fireant_raft.jpg}
+		\caption{Fire ant floating rafts research}
+	\end{figure}
 	
 	Recent work in self-reconfigurable modular robotics have been focused on increasing the modularity of these system to be used in unstructured and unpredictable environment. Design such as M-TRAN has long established the feasibility of modular robotics which is able to metamorphose into various shape and by changing connectivity among the modules without external help \citep{murata2002m-tran}. In \citep{duffy2015lift} it proposed a scalable multi-rotor aircraft which can be manually extended depending on the payload requirement. \citep{jorgensen2004modular} proposed a  modular robotics system with a lattice structure, which uses a hooks powered by a motor to create a physical connection between modules. These research all rely on traditional attachment and detachment mechanism which was not designed to be used in modular robotics. Hence this research intent to investigate and proposed new attachment and detachment design for modular robotics.\\
 	
@@ -145,6 +151,12 @@
 	In addition, integration with ROS allows user to test their algorithm in Gazebo. One benefit of Gazebo is its capability to integrate virtual sensors and being able to get actual data from the simulation to test the algorithm. It allows user to integrate noise into the simulated virtual data to test the robustness of the algorithm as well, and simulate how data would be like in the real world.\\
 	\end{minipage}
 	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=12cm]{pictures/gazebo_quad_cam.png}
+		\caption{Gazebo Simulator Environment with quadcopter}
+	\end{figure}
+	
 	\subsubsection{ROS Visualisation}
 	\hfill\begin{minipage}{\dimexpr\textwidth-1cm}
 	ROS Visualisation, also known as RVIZ is a 3D visualiser for displaying sensor data and state information from ROS. Using RVIZ, user are able to visualise actual output of the system in a 3D format. However, RVIZ does not include any physics SDK and is purely a tool for visualisation.\\
@@ -204,7 +216,11 @@
 	
 	There are several processes in this project which is crucial to the success of the project. These crucial processes are also the major milestone in this project. These milestones are set in place to ensure the research project is kept up to the schedule.\\
 	
-	% insert new process and timeline
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=\linewidth]{pictures/timeline.png}
+		\caption{Timeline defined for this research project}
+	\end{figure}
 	
 	This timeline is created to ensure that there is sufficient time to manufacture the prototype, and maximise the amount of time in research and development of new universal connection mechanism. This compromise would provide me with the most time for research, but enough time to create a prototype for the capstone showcase. Due to the time constraint, this timeline was design to allocate bulk of the time into actual engineering research and implementation for the research project. The rest are the preparation required for the subject.\\
 	
@@ -226,7 +242,7 @@
 		\item Project Management Software (Microsoft project)
 	\end{itemize}
 	
-	\subsubsection{Preparation stage complete}
+	\subsubsection{Preparation stage completed}
 	
 	This milestone is crucial as it prepares me for the actual research and development of the system. Excluding the simulation, there are many components and equipment's that is required to be used during manufacturing of the proposed design. There are several tasks in this milestone and one of them includes buying materials needed for the prototyping as there might be a lead time in the purchasing and delivery of materials.\\
 	
@@ -241,11 +257,50 @@
 		\item Low-level programming for micro-controller
 	\end{itemize}
 	
-	\subsubsection{Creating a simulation}
+	\subsubsection{Creating a simulation for a self-reconfigurable quadcopter based system}
 	
-	\subsubsection{Proposed feasible mechanism}
+	The main goal of this milestone is to create a simulation which would simulate how the quad-copter module would attach and detach to each other. As mentioned in the methodology section, Gazebo ROS Package is the simulator we chose due to its wide variety of Physics SDK within it and it's ability to implement virtual sensors in the simulation as well. \\
 	
-	\subsubsection{Manufacture prototype}
+	One of the main task is to find a pre-build package within ROS wiki for simulating a single quad-copter. There are currently plenty of pre-build packages from simulation quad-copters which allows the user to modify the package with addition sensors. This allows the user to test their algorithm written for a quad-copter to be tested on a generic simulation with real sensor feedback. We aim to modify one of these packages to which it would allow us to visualise how the attachment and detachment would be like. \\
+	
+	Another task is to utilise the Gazebo Simulator SDK written in C++ and create a special function for attaching multiple quad-copter together to form a single structure. The Gazebo simulator usually only simulate single or multiple robot modules in its environment, however not much simulation was made to simulate a modular robotics with multiple robot models that forms into a single model. Hence some research and testing are required to create a package that would handle the attachment and detachment of the robot model in the simulation.\\
+	
+	Once these task are completed, the final task is to create a single ROS package which contains all of the necessary package for the simulation. This would allow us to visualise the attachment and detachment of quad-copter modules and even allow for the testing of self-reconfiguration algorithm for a quad-copter based system.\\
+	
+	Some of the resources that are required for this milestone includes:
+	\begin{itemize}
+		\item ROS Wiki
+		\item Gazebo C++ API
+	\end{itemize}
+	
+	\subsubsection{Proposed feasible mechanism for self-reconfiguration}
+	
+	The goal for this milestone is to proposed a feasible connection mechanism which would satisfy a set of requirements. These requirements will be determined from our simulation made in the previous milestone. From our simulation, we can visualise how the quad-copter module would attach and detach from each other, this would allow us to define a set of requirements for the hypothetical connection mechanism.\\
+	
+	Once we have the requirements, the next step is to determine the suitable material for such a connection mechanism. This would requires research into different materials and its properties. In addition, we have to determine the ideal design for the connection mechanism which compliments the materials selected. This would require heaps of research into past design and material choices on previous modular robotics.\\
+	
+	Once a design is finalise, the final task for this milestone is to create a Computer Aided Design (CAD) drawing for the proposed design. The final design should consist of the correct dimension of the mechanism. This would allow the parts to be manufactured in the next milestone.\\
+	
+	Some of the resources that are required for this milestone includes:
+	\begin{itemize}
+		\item Google Scholar (Research)
+		\item Computer Aided Design Software (Solidworks)
+	\end{itemize}
+	
+	\subsubsection{Manufacture proposed design}
+	
+	This milestone builds on top of the previous milestone. The main goal of this milestone is to create a working prototype of the proposed design in the previous milestone. There are a few activities in this milestone, which are mostly related to manufacturing of the proposed design.\\
+	
+	The proposed design from the previous design only contains the connection mechanism. The task is to a simple Autonomous Ground Vehicle (AGV) which would allow us to incorporate our proposed connection mechanism. This would allow us to test the properties of the connection mechanism in an actual robot and determine its reliability and efficiency. \\
+	
+	Once the design is finalise, the next task is to manufacture the actual prototype for demonstration and data collection. This would requires access to workshop and UTS Protospace, hence I would need to get inducted for these workshop prior to manufacturing of the proposed design. Once the prototype has been successfully manufactured, it could assembled to determine if here are any manufacturing error that could have affected the tolerance of the design. This would prevent the manufactured part from assembling correctly.\\
+
+	Some of the resources that are required for this milestone includes:
+	\begin{itemize}
+		\item Protospace (Advance additive manufacturing lab)
+		\item Mechatronics workshop
+		\item General workshop (Building 1 level 2)
+	\end{itemize}
 	
 	\subsubsection{Capstone prototype ready for showcase}
 	
@@ -259,16 +314,59 @@
 	
 	\subsection{Uncertainty and risk control}
 	
+	\subsubsection{Safety and risk control}
+	
+	With the evaluation of this capstone according to the UTS EHS risk assessment form, the risk level was evaluated as low. This capstone research will mainly be dealing with modelling and design of a self-reconfigurable quad-copter on a Computer Aided Design Software. Other task includes creating a simulation for visualisation and testing of various algorithm on ROS and Gazebo Simulator.\\
+	
+	As for manufacturing, the main bulk of the design will be manufactured using additive manufacturing where it will mainly take place in UTS Protospace. There are safety controls in place to prevent accident from happening in the lab. In addition, the parts will be printed by a technical staff and the other simple workshop work will be done in building 11 level 10 mechatronics lab. Similarly to UTS Protospace, there are safety controls in place to prevent an accident from happening as well.\\
+	
+	The testing of the completed prototype should not pose any risk and safety hazard and it could be easily done in the building 11 mechatroncis lab. Therefore, we can conclude that the risk with this capstone research is relatively low and there should not be any concern with the safety of the student.
+	
+	\subsubsection{Uncertainty}
+	
+	The uncertainty of the project could be labelled as high. This is due to the research topic being something relatively new. There are not much research that has been done in self-reconfigurable quad-copter based system, hence most of the research proposed by this capstone research might not be feasible and functional as well. In order to reduce the uncertainty within the capstone research, we would test our proposed connection mechanism in an AGV with omni-directional wheels to test the functionality of the design.\\
+	
+	Another uncertainty is the machines in UTS Protospace. The selected machine for additive manufacturing might not be functional due to upgrades and maintenance. The selected materials for the design might not be in stock as well. This would affect the project as the proposed design would not be able to be manufactured and delay the progress of the project.\\
+	
+	Lastly, there is a possibility that the project supervisor does not accept the prototype for the capstone showcase. This would also mean that one of the milestones for the project would not be achievable. To prevent such a case from happening, constant communication with the project supervisor is required in order to ensure that the project outcome is inline with his expectation and he is satisfied with the outcome of the research.\\
+	
 	\subsection{Communication management}
 	
 	Constant communication is crucial to ensure the project runs smoothly, hence a communication plan outlining the communication channels and frequency amongst the part involved is included below.\\
 	
-	%TODO: insert screenshot of commuinication plan
+	\begin{figure}[h!]
+		\includegraphics[width=\linewidth]{pictures/communication_plan.png}
+		\caption{Communication Plan}
+	\end{figure}
 	
 	The primary recipient in the communication plan is the project co-supervisor as he would be helping out with most of the details of the project. We have agreed on various communication method which includes face to face meeting, emails and messaging. The secondary recipient would be the main supervisor. He would be overseeing the entire project and make all of the main decisions. The communication method with the main supervisor would be a lot more formal, including an appointment-based meeting and emails. The face to face meeting with the co-supervisor is the most efficient method of communication as it is the easiest to convey my idea directly to him.\\
 	
 	\section{Progress Statement}
+	
+	\subsection{Simulation for a single quad-copter model}
+	
+	The current simulation is able to simulate a single generic quad-copter model in the environment. The package is modified to work on my current system as well.
 
+	%TODO insert simulation
+	
+	\subsection{Creating virtual connection between modules in simulation}
+	
+	This simple simulation is a test for creating a virtual joint between different model in the simulation to create a single robot model in the simulation. The cube represents a single quad-copter module and the C++ code for interfacing Gazebo API is yet to be completed.
+	
+	% TODOinsert picture of the simulation for the joint
+	
+	\subsection{Simple sketches for proposed connection mechanism}
+	
+	The picture below shows a simple sketch of the proposed design using Polymagnets.
+	
+	% TODOinsert picture of the sketch.
+	
+	\pagebreak
+
+	\section{Appendix}
+	\subsection{Gantt Chart}
+	
+	\includepdf[pages={1-2}]{pictures/gantt_chart.pdf}
 	
 	% |----------------- End of the content for the report -----------------|
 	\pagebreak
