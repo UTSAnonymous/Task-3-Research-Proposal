@@ -1,5 +1,9 @@
 \begin{thebibliography}{xx}
 
+\harvarditem{{\em Anylogic - Use of simulation}}{n.d.}{simulation}
+{\em Anylogic - Use of simulation}  \harvardyearleft n.d.\harvardyearright .
+\newline\harvardurl{https://www.anylogic.com/use-of-simulation/}
+
 \harvarditem[Augugliaro et~al.]{Augugliaro, Lupashin, Hamer, Male, Hehn,
   Mueller, Willmann, Gramazio, Kohler \harvardand\
   D'Andrea}{2014}{augugliaro2014flight}
@@ -14,6 +18,10 @@ Duffy, M.~J. \harvardand\ Samaritano, A.  \harvardyearleft
   2015\harvardyearright , The lift! project-modular, electric vertical lift
   system with ground power tether, {\em in} `33rd AIAA Applied Aerodynamics
   Conference', p.~3013.
+
+\harvarditem{{\em Gazebo main website}}{n.d.}{Gazebo}
+{\em Gazebo main website}  \harvardyearleft n.d.\harvardyearright .
+\newline\harvardurl{http://gazebosim.org/}
 
 \harvarditem[Jorgensen et~al.]{Jorgensen, Ostergaard \harvardand\
   Lund}{2004}{jorgensen2004modular}
@@ -56,6 +64,10 @@ Oung, R. \harvardand\ D’Andrea, R.  \harvardyearleft 2011\harvardyearright ,
 {\em Programmable magnet wikipedia site}  \harvardyearleft
   n.d.\harvardyearright .
 \newline\harvardurl{https://en.wikipedia.org/wiki/Programmable-magnet}
+
+\harvarditem{{\em PyBullet main website}}{n.d.}{pybullet}
+{\em PyBullet main website}  \harvardyearleft n.d.\harvardyearright .
+\newline\harvardurl{https://pybullet.org/wordpress/}
 
 \harvarditem[Saldana et~al.]{Saldana, Gabrich, Li, Yim \harvardand\
   Kumar}{2018}{saldana2018modquad}

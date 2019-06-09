@@ -5,45 +5,51 @@ The style file: agsm.bst
 Database file #1: References.bib
 Warning--entry type for "polymagnet2008" isn't style-file defined
 --line 101 of file References.bib
-You've used 13 entries,
+Warning--entry type for "Gazebo" isn't style-file defined
+--line 107 of file References.bib
+Warning--entry type for "pybullet" isn't style-file defined
+--line 113 of file References.bib
+Warning--entry type for "simulation" isn't style-file defined
+--line 119 of file References.bib
+You've used 16 entries,
             2909 wiz_defined-function locations,
-            725 strings with 7826 characters,
-and the built_in function-call counts, 86241 in all, are:
-= -- 14252
+            735 strings with 8019 characters,
+and the built_in function-call counts, 91165 in all, are:
+= -- 15126
 > -- 1210
 < -- 1
-+ -- 7009
++ -- 7353
 - -- 378
-* -- 7714
-:= -- 16658
-add.period$ -- 13
-call.type$ -- 13
-change.case$ -- 176
-chr.to.int$ -- 13
-cite$ -- 13
-duplicate$ -- 261
-empty$ -- 510
+* -- 8133
+:= -- 17550
+add.period$ -- 16
+call.type$ -- 16
+change.case$ -- 200
+chr.to.int$ -- 16
+cite$ -- 16
+duplicate$ -- 300
+empty$ -- 582
 format.name$ -- 419
-if$ -- 15631
+if$ -- 16592
 int.to.chr$ -- 5
 int.to.str$ -- 0
 missing$ -- 12
-newline$ -- 43
+newline$ -- 55
 num.names$ -- 129
-pop$ -- 60
+pop$ -- 84
 preamble$ -- 1
-purify$ -- 190
+purify$ -- 220
 quote$ -- 0
-skip$ -- 241
+skip$ -- 277
 stack$ -- 0
-substring$ -- 20511
-swap$ -- 82
-text.length$ -- 173
+substring$ -- 21606
+swap$ -- 103
+text.length$ -- 185
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 52
+type$ -- 64
 warning$ -- 0
-while$ -- 284
+while$ -- 296
 width$ -- 0
-write$ -- 187
-(There was 1 warning)
+write$ -- 220
+(There were 4 warnings)
